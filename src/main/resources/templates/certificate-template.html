@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Certificate of Completion</title>
+    <style>
+        @page {
+            margin: 0;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Georgia, serif;
+        }
+
+        .certificate {
+            border: 20px solid #975D2D;
+            text-align: center;
+            background-image: linear-gradient(120deg, #fdfbfb 0%, #fbf6e9 100%);
+        }
+
+        .content {
+            padding: 20px 30px;
+        }
+
+        .logo {
+            display: block;
+            width: 220px;
+            height: auto;
+            margin: 5px auto 20px;
+        }
+
+        .title {
+            font-size: 50px;
+            color: #975D2D;
+            text-transform: uppercase;
+            margin: 10px 0 20px;
+            letter-spacing: 4px;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            font-size: 28px;
+            color: #975D2D;
+            margin: 20px 0;
+            font-weight: normal;
+        }
+
+        .decorative-line {
+            width: 300px;
+            height: 1px;
+            background-color: #C9AA81;
+            margin: 15px auto;
+        }
+
+        .intro-text {
+            font-size: 22px;
+            margin: 35px 0 20px;
+        }
+
+        .recipient {
+            font-size: 40px;
+            font-style: italic;
+            margin: 15px 0;
+        }
+
+        .course-text {
+            font-size: 22px;
+            margin: 40px 0 25px;
+        }
+
+        .course-name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #975D2D;
+        }
+
+        .footer-table {
+            width: 100%;
+            margin-top: 42px;
+            border-collapse: collapse;
+        }
+
+
+        .footer-table td {
+            width: 33.33%;
+            text-align: center;
+            vertical-align: bottom;
+            padding: 5px 10px;
+        }
+
+        .footer-value {
+            font-size: 20px;
+            font-style: italic;
+            margin: 0;
+        }
+
+        .footer-line {
+            width: 130px;
+            height: 1px;
+            background-color: #C9AA81;
+            margin: 15px auto;
+        }
+
+        .footer-label {
+            font-size: 14px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        .badge {
+            width: 120px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="certificate">
+    <div class="content">
+        <img src="${logo_url}" class="logo" alt="Coffee Academy">
+
+        <h1 class="title">Certificate</h1>
+        <div class="decorative-line"></div>
+        <h2 class="subtitle">of Completion</h2>
+
+        <p class="intro-text">This certificate is proudly presented to</p>
+        <p class="recipient">${recipient_name}</p>
+        <div class="decorative-line"></div>
+
+        <p class="course-text">For successfully completing the course:</p>
+        <p class="course-name">${course_name}</p>
+
+        <table class="footer-table">
+            <tr>
+                <td>
+                    <p class="footer-value">${date}</p>
+                    <div class="footer-line"></div>
+                    <p class="footer-label">Date</p>
+                </td>
+                <td>
+                    <img src="${badge_url}" class="badge" alt="Badge">
+                </td>
+                <td>
+                    <p class="footer-value">${instructor}</p>
+                    <div class="footer-line"></div>
+                    <p class="footer-label">Instructor</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>
